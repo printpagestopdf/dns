@@ -12,7 +12,7 @@ aaaa(_a, "2a02:c207:0000:2928:0000:0000:0000:0002")
 cname("www", _a)
 cname("widgettest", "m1331.contabo.net")
 
-cname("_acme-challenge.klimawende.org", "_acme-challenge.umweltfreun.de")
+cname( "_acme-challenge","_acme-challenge.klimawende.org")
 
 
 
