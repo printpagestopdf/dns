@@ -3,7 +3,7 @@
 -- SOA record is automatically generated
 -- Variable _a is replaced with zone name
 -- _a = "rrnet.net.eu.org"
-
+ 
 -- A records
 a(_a, "144.24.185.189")
 aaaa(_a, "2603:c020:8007:1100:8875:41f7:25b6:8d1a")
