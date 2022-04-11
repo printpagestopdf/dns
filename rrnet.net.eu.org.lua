@@ -1,8 +1,8 @@
--- File: umweltfreun.de.lua
--- Zone: umweltfreun.de
+-- File: rrnet.net.eu.org.lua
+-- Zone: rrnet.net.eu.org
 -- SOA record is automatically generated
 -- Variable _a is replaced with zone name
--- _a = "umweltfreun.de"
+-- _a = "rrnet.net.eu.org"
 
 -- A records
 a(_a, "144.24.185.189")
