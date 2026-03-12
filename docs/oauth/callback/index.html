@@ -5,6 +5,12 @@
 </head>
 <body>
   <p>Authentifizierung läuft...</p>
+
+  <!-- Fallback Button falls Auto-Redirect blockiert -->
+  <button id="btn" style="display:none; padding:16px; font-size:18px;">
+    Zurück zur App
+  </button>
+</body>
   <script>
     const params = new URLSearchParams(window.location.search);
     const code = params.get('code');
@@ -30,10 +36,5 @@
       window.location.href = intentUrl;
     }
   </script>
-
-  <!-- Fallback Button falls Auto-Redirect blockiert -->
-  <button id="btn" style="padding:16px; font-size:18px;">
-    Zurück zur App
-  </button>
-</body>
+  
 </html>
