@@ -2,22 +2,38 @@
 <html>
 <head>
   <title>SlowMail Auth</title>
+</head>
+<body>
+  <p>Authentifizierung läuft...</p>
   <script>
-    // OAuth Code aus URL extrahieren und per Custom Scheme zurück zur App
     const params = new URLSearchParams(window.location.search);
     const code = params.get('code');
     const state = params.get('state');
     const error = params.get('error');
 
     if (code || error) {
-      // Zurück zur App via Custom Scheme
-      const redirect = `comthripperslowmail://auth?code=${code}&state=${state}`;
-      window.location.href = redirect;
+      // Android Intent URL – funktioniert zuverlässig in Chrome
+      const intentUrl = `intent://auth?code=${code}&state=${state}` +
+        `#Intent;` +
+        `scheme=comthripperslowmail;` +
+        `package=com.theripper.slow_mail;` +
+        `S.browser_fallback_url=https://printpagestopdf.github.io/dns/oauth/callback;` +
+        `end`;
+
+      // Sichtbarer Button als Fallback falls Auto-Redirect blockiert wird
+      document.getElementById('btn').style.display = 'block';
+      document.getElementById('btn').onclick = () => {
+        window.location.href = intentUrl;
+      };
+
+      // Auto-Redirect versuchen
+      window.location.href = intentUrl;
     }
   </script>
-  <meta http-equiv="refresh" content="0">
-</head>
-<body>
-  <p>Authentifizierung läuft...</p>
+
+  <!-- Fallback Button falls Auto-Redirect blockiert -->
+  <button id="btn" style="display:none; padding:16px; font-size:18px;">
+    Zurück zur App
+  </button>
 </body>
 </html>
