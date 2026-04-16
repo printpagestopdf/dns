@@ -2,9 +2,9 @@
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "com.theripper.slow_mail",
+    "package_name": "com.theripper.slowmail",
     "sha256_cert_fingerprints": [
-      "1E:FF:9D:83:04:47:1D:7C:3D:E7:63:EF:40:F5:94:C2:46:DA:F9:D8:F3:73:4B:69:3B:DB:DC:22:36:83:19:CD"
+      "CA:F5:AC:43:0E:EE:B7:85:0F:CF:3F:F5:A2:BA:33:98:FA:4C:26:B4:0C:F0:A6:9B:A1:A5:69:B1:55:AE:EB:65"
     ]
   }
 }]
